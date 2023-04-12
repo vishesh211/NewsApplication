@@ -61,6 +61,20 @@ dependencies {
     // Retrofit & OkHttp
     implementation "com.squareup.retrofit2:retrofit:$dep_versions.retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$dep_versions.retrofit"
+
+    def composeBom = platform('androidx.compose:compose-bom:2023.03.00')
+    implementation composeBom
+    androidTestImplementation composeBom
+
+    // Choose one of the following:
+    // Material Design 3
+    implementation "androidx.compose.material3:material3:$dep_versions.compose"
+
+    implementation "androidx.compose.ui:ui:$dep_versions.compose"
+
+    // Android Studio Preview support
+    implementation "androidx.compose.ui:ui-tooling-preview:$dep_versions.compose"
+    debugImplementation "androidx.compose.ui:ui-tooling:$dep_versions.compose"
 }
 // Allow references to generated code
 kapt {
