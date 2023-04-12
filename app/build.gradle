@@ -57,6 +57,10 @@ dependencies {
     //dagger-hilt
     implementation "com.google.dagger:hilt-android:$dep_versions.hilt"
     kapt "com.google.dagger:hilt-compiler:$dep_versions.hilt"
+
+    // Retrofit & OkHttp
+    implementation "com.squareup.retrofit2:retrofit:$dep_versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$dep_versions.retrofit"
 }
 // Allow references to generated code
 kapt {
