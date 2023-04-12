@@ -79,6 +79,9 @@ dependencies {
     //room
     implementation "androidx.room:room-runtime:$dep_versions.room_version"
     annotationProcessor "androidx.room:room-compiler:$dep_versions.room_version"
+
+    //navigation-compose
+    implementation "androidx.navigation:navigation-compose:$dep_versions.nav_version"
 }
 // Allow references to generated code
 kapt {
