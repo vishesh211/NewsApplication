@@ -1,0 +1,5 @@
+def dep_versions = [:]
+
+dep_versions.lifecycle = "2.6.1"
+
+ext.dep_versions = dep_versions
