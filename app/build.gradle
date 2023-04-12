@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id "kotlin-kapt"
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -52,4 +53,12 @@ dependencies {
 
     // Annotation processor
     kapt "androidx.lifecycle:lifecycle-compiler:$dep_versions.lifecycle_version"
+
+    //dagger-hilt
+    implementation "com.google.dagger:hilt-android:$dep_versions.hilt"
+    kapt "com.google.dagger:hilt-compiler:$dep_versions.hilt"
+}
+// Allow references to generated code
+kapt {
+    correctErrorTypes true
 }
