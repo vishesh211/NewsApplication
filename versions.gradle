@@ -1,5 +1,5 @@
 def dep_versions = [:]
 
-dep_versions.lifecycle = "2.6.1"
+dep_versions.lifecycle_version = "2.6.1"
 
 ext.dep_versions = dep_versions
