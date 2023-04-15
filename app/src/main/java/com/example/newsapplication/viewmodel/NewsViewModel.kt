@@ -21,7 +21,10 @@ class NewsViewModel @Inject constructor(private val newsRepository: NewsReposito
 
     fun getTopArticles() {
         viewModelScope.launch{
-
+            val response = newsRepository.getTopNewsHeadlines()
+            if (response.isSuccessful) {
+                _topArticles.value = response.body()?.articles
+            }
         }
     }
 }
